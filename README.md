@@ -13,12 +13,38 @@ A script to automate submitting assignments to cslab for Computer Systems course
 ### Dependencies
 
 * Python 3.8
+    * Linux
+    ```
+    sudo apt-get install python3.8
+    ```
+    * MacOS
+    Download installer [here](https://www.python.org/downloads/macos/)
+
+    * Windows
+    Download installer [here](https://www.python.org/downloads/windows/)
+
 * cpplint 
+    To install run:
+    ```
+    pip install cppclient
+    ```
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+1. Clone the repo
+```
+git clone https://github.com/AndrewBoessen/CompSys-Submit.git
+```
+
+2. Open the directory
+```
+cd CompSys-Submit
+```
+
+3. Run installer
+```
+./install.sh
+```
 
 ### Executing program
 
