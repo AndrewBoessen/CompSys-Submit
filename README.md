@@ -1,6 +1,6 @@
 # CompSys-Submit
 
-A script to automate submitting assignments to cslab for Computer Systems course as Boston College.
+A script to automate submitting assignments to cslab for Computer Systems course at Boston College.
 
 ## Description
 
@@ -8,54 +8,28 @@ A script to automate submitting assignments to cslab for Computer Systems course
 * Ensures file will compile
 * Copies file to student's cslab directory
 
-## Getting Started
-
-### Dependencies
-
-* Python 3.8
-    * Linux
-        ```
-        sudo apt-get install python3.8
-        ```
-
-    * MacOS
-        Download installer [here](https://www.python.org/downloads/macos/)
-
-    * Windows
-        Download installer [here](https://www.python.org/downloads/windows/)
-
-* cpplint 
-    ```
-    pip install cppclient
-    ```
-
 ### Installing
 
-1. Clone the repo
-    ```
-    git clone https://github.com/AndrewBoessen/CompSys-Submit.git
-    ```
-
-2. Open the directory
-    ```
-    cd CompSys-Submit
-    ```
-
-3. Run installer
-    ```
-    ./install.sh
-    ```
+To install from PyPI, run:
+```
+$ pip install cs-submit
+```
+Then run it with:
+```
+$ cs-submit [OPTIONS] files
+```
 
 ### Executing program
 
+Run it with:
 ```
-code blocks for commands
+$ cs-submit [OPTIONS] files
 ```
 
 ## Help
 
 ```
-cs-submit --help
+$ cs-submit --help
 ```
 
 ## Authors
