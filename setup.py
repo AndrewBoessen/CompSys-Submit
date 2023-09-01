@@ -3,8 +3,15 @@ import setuptools
 with open("README.md", "r", encoding = "utf-8") as fh:
     long_description = fh.read()
 
+this = os.path.dirname(os.path.realpath(__file__))
+
+
+def read(name):
+    with open(os.path.join(this, name)) as f:
+        return f.read()
+
 setuptools.setup(
-    name = "CompSys-Submit",
+    name = "cs-submit",
     version = "0.0.1",
     author = "Andrew Boessen",
     author_email = "boessena@bc.edu",
@@ -20,7 +27,8 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir = {"": "src"},
-    packages = setuptools.find_packages(where="src"),
-    python_requires = ">=3.8"
+    packages = ["src/cs-submit"]
+    install_requires = read("requirements.txt"),
+    scripts = ["bin/cs-submit"]
+    python_requires = ">=3.x"
 )
