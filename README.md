@@ -14,11 +14,6 @@ To install from PyPI, run:
 ```
 $ pip install cs-submit
 ```
-Then run it with:
-```
-$ cs-submit [OPTIONS] files
-```
-
 ### Executing program
 
 Run it with:
