@@ -1,0 +1,74 @@
+#!/usr/bin/env python3
+#
+#cs-submit - a cli tool to lint, compile, text, and copy files to cslab
+#
+#Used for Computer Systems course at Boston College
+
+import sys
+import argparse
+import getpass
+
+sys.path.append("../")
+from c_linter import *
+from cslab import *
+from pa_testing import *
+
+# ClI
+def init_parser() -> argparse.ArgumentParser:
+    return argparse.ArgumentParser(
+        prog="cs-submit",
+        description="A cli tool to lint, compile, text, and copy files to cslab"
+    )
+
+def add_args(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
+        '-a', 
+        '--assignment', 
+        help="Name of assignment, eg. 'pa1'", 
+        required=True
+    )
+    parser.add_argument(
+        '-p',
+        '--path',
+        help="Path to assignment directory in cslab, eg. '~/pa1/",
+        required=True
+        
+    )
+    parser.add_argument(
+        '-l',
+        '--linter',
+        help="Run c linter on file",
+        choices=[True, False],
+        default=True
+    )
+    parser.add_argument(
+        '-t',
+        '--test',
+        help="Run tests on assigment",
+        choices=[True, False],
+        default=True
+    )
+    parser.add_argument(
+        '-c',
+        '--compile',
+        help="Check if assigment compiles",
+        choices=[True, False],
+        default=True
+    )
+    parser.add_argument(
+        '-m',
+        '--move-file',
+        help="Copy file to cslab server",
+        choice=[True, False],
+        default=True
+    )
+
+
+# MAIN
+def main(){
+
+}
+
+if __name__ == "__main__":
+    main()
+
