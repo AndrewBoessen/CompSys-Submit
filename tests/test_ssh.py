@@ -3,7 +3,7 @@ import unittest
 from unittest.mock import Mock, patch, MagicMock
 from paramiko import SSHClient, AutoAddPolicy
 
-sys.path.append("../src/cslab/")
+sys.path.append("src/cslab/")
 from ssh_util import create_ssh_client, connect_ssh
 
 # Mock the paramiko.SSHClient class

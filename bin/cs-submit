@@ -1,67 +1,86 @@
 #!/usr/bin/env python3
 #
-#cs-submit - a cli tool to lint, compile, text, and copy files to cslab
+# cs-submit - a cli tool to lint, compile, text, and copy files to cslab
 #
-#Used for Computer Systems course at Boston College
+# Used for Computer Systems course at Boston College
 
 import sys
 import argparse
 import getpass
 
+# Add the parent directory to the system path
 sys.path.append("../")
+
+# Import relevant modules
 from c_linter import *
 from cslab import *
 from pa_testing import *
 
-# ClI
 def init_parser() -> argparse.ArgumentParser:
+    """
+    Initialize and configure the command-line argument parser.
+
+    Returns:
+    argparse.ArgumentParser: The configured argument parser.
+    """
     return argparse.ArgumentParser(
         prog="cs-submit",
-        description="A cli tool to lint, compile, text, and copy files to cslab"
+        description="A CLI tool to lint, compile, test, and copy files to cslab"
     )
 
 def add_args(parser: argparse.ArgumentParser) -> None:
+    """
+    Add command-line arguments to the argument parser.
+
+    Parameters:
+    - parser (argparse.ArgumentParser): The configured argument parser.
+
+    Returns:
+    None
+    """
     parser.add_argument(
         '-a', 
         '--assignment', 
-        help="Name of assignment, eg. 'pa1'", 
+        help="Name of assignment, e.g., 'pa1'", 
         required=True
     )
     parser.add_argument(
         '-p',
         '--path',
-        help="Path to assignment directory in cslab, eg. '~/pa1/",
+        help="Path to the assignment directory in cslab, e.g., '~/pa1/'",
         required=True
-        
     )
     parser.add_argument(
         '-l',
         '--linter',
-        help="Run c linter on file",
+        help="Run C linter on files",
         choices=[True, False],
         default=True
     )
     parser.add_argument(
         '-t',
         '--test',
-        help="Run tests on assigment",
+        help="Run tests on assignment",
         choices=[True, False],
         default=True
     )
     parser.add_argument(
         '-c',
         '--copy-file',
-        help="Copy file to cslab server",
-        choice=[True, False],
+        help="Copy files to cslab server",
+        choices=[True, False],
         default=True
     )
 
-
 # MAIN
-def main(){
+def main():
+    """
+    The main function that is executed when the script is run.
 
-}
+    Returns:
+    None
+    """
+    # Add your main logic here
 
 if __name__ == "__main__":
     main()
-

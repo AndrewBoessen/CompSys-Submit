@@ -5,7 +5,7 @@ from paramiko import SSHClient
 from scp import SCPClient
 import sys
 
-sys.path.append("../src/cslab")
+sys.path.append("src/cslab")
 from scp_util import create_scp_client, copy_file
 
 class TestSCPFunctions(unittest.TestCase):
