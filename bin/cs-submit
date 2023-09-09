@@ -50,14 +50,7 @@ def add_args(parser: argparse.ArgumentParser) -> None:
     )
     parser.add_argument(
         '-c',
-        '--compile',
-        help="Check if assigment compiles",
-        choices=[True, False],
-        default=True
-    )
-    parser.add_argument(
-        '-m',
-        '--move-file',
+        '--copy-file',
         help="Copy file to cslab server",
         choice=[True, False],
         default=True
